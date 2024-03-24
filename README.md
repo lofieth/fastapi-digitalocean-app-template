@@ -16,13 +16,13 @@ Follow the steps below to get started with this FastAPI template:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/nightzeroeth/fastapi-uvicorn-docker-template.git
+   git clone https://github.com/nightzeroeth/fastapi-digitalocean-app-template.git
    ```
 
 2. **Navigate to the project directory**
 
    ```bash
-   cd fastapi-uvicorn-docker-template
+   cd fastapi-digitalocean-app-template
    ```
 
 3. **Customize your FastAPI application**
@@ -73,5 +73,3 @@ Contributions are welcome! If you have any suggestions, feature requests, or bug
 ## License
 
 This project is licensed under the MIT License.
-
-Feel free to customize this template further to suit your project's specific requirements.
