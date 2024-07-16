@@ -16,8 +16,7 @@ app = FastAPI(docs_url="/docs", redoc_url="/redocs")
 async def hello_world_endpoint(
     test: str = Body(),
 ):
-    result = await asyncio.to_thread(
+    return await asyncio.to_thread(
         hello_world,
         test,
     )
-    return result
