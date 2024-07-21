@@ -1,14 +1,5 @@
-import asyncio
-
+from fastapi import HTTPException, status
 from telegram import Bot
-
-
-def telegram_print(text):
-    if not text:
-        return
-
-    asyncio.run(send_message(text))
-
 
 # Create a Telegram Bot:
 # Open Telegram and search for the "BotFather" bot.
@@ -19,11 +10,25 @@ def telegram_print(text):
 # To get group chat ID, first add the bot to the group, then send /my_id in the group.
 
 
-async def send_message(text):
-    token = ""
-    chat_id = ""
+async def telegram_print(text):
+    try:
+        # Check if the text is empty or None
+        if not text:
+            return
 
-    bot = Bot(token)
-    await bot.send_message(chat_id, text)
+        # Your bot token here
+        token = ""
+        # Your chat ID here
+        chat_id = ""
 
-    # time.sleep(1)
+        # Create a new instance of the Telegram Bot
+        bot = Bot(token)
+        # Send a message to the specified chat ID
+        await bot.send_message(chat_id, text)
+
+    except Exception as e:
+        # Handle any exceptions that occur during execution
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=str(e),
+        )
