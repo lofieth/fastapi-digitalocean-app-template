@@ -1,3 +1,5 @@
+import os
+
 from fastapi.responses import JSONResponse
 from fastapi import HTTPException, status
 from database.database import database
@@ -5,11 +7,13 @@ from database.database import database
 
 def hello_world(text):
     try:
+        # Accessing an environment variable in Python
+        hello = os.getenv("hello")
         # Concatenate "hello_world " with the provided text and store it in the database
-        hello_world = database("hello_world " + text)
+        world = database("world")
 
         # Return a JSON response with the result
-        return JSONResponse({"index": hello_world})
+        return JSONResponse({"message": hello + " " + world + " " + text})
 
     except Exception as e:
         # Handle any exceptions that occur during execution

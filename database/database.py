@@ -4,9 +4,9 @@ from fastapi import HTTPException, status
 def database(filter):
     try:
         # Check if the filter matches "hello_world"
-        if filter == "hello_world":
+        if filter == "world":
             # Return "hello_world" if the filter matches
-            return "hello_world"
+            return "world"
         # Return None if the filter does not match
         return None
 
