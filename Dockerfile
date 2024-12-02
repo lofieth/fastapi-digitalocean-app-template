@@ -11,7 +11,6 @@ RUN pip install -r requirements.txt
 
 COPY app.py .
 COPY API API
-COPY credential credential
 COPY database database
 COPY developer developer
 COPY function function

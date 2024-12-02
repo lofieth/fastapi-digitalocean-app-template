@@ -1,11 +1,10 @@
-import os
-
 from fastapi.responses import JSONResponse
 from fastapi import HTTPException, status
 from database.database import database
+import os
 
 
-def hello_world(text):
+async def hello_world(text):
     try:
         # Accessing an environment variable in Python
         hello = os.getenv("hello")
