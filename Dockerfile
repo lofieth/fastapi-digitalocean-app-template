@@ -11,8 +11,6 @@ RUN pip install -r requirements.txt
 
 COPY app.py .
 COPY API API
-COPY database database
-COPY developer developer
 COPY function function
 
 EXPOSE 8080
