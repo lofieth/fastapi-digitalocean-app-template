@@ -22,3 +22,5 @@ Each API module should contain only one function
 During development you’ll naturally encounter reusable logic
 
 Create these shared functions in the functions folder as they are used across multiple APIs
+
+Each module name should match its corresponding API function
