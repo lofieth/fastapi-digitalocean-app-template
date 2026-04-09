@@ -13,10 +13,9 @@ Functions in app.py that call an API should follow the naming pattern name_api
 ## API
 All API-related code should be placed in the api folder 
 
-Each module name should match its corresponding API function
+Each module should contain only one function
 
-## One function per API
-Each API module should contain only one function
+Each module name should match its corresponding API function
 
 ## Function
 During development you’ll naturally encounter reusable logic
