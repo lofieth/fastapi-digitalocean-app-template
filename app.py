@@ -30,7 +30,7 @@ app.add_middleware(
 
 
 @app.post(path="/")
-async def hello_world_endpoint(
+async def hello_world_api(
     text: str = Body(),
 ):
     return await hello_world(text)
